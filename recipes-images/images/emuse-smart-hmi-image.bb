@@ -1,6 +1,6 @@
 require tdx-reference-minimal-image.bb
 
-SUMMARY = "Embedded Linux Qt LGPL Image"
+SUMMARY = "Embedded Linux Smart HMI Image"
 DESCRIPTION = "Embedded Linux image with Qt LGPLv3 for smart HMIs"
 
 inherit populate_sdk_qt5
