@@ -71,7 +71,6 @@ RRECOMMENDS_packagegroup-devel-tdx-cli = "\
     ldd \
     less \
     perf \
-    serial-test \
     smem \
     spitools \
     spidev-test \
@@ -139,7 +138,6 @@ RRECOMMENDS_packagegroup-utils-tdx-cli = "\
     alsa-utils \
     alsa-utils-aplay \
     alsa-utils-amixer \
-    bluez-alsa \
     bzip2 \
     e2fsprogs \
     e2fsprogs-resize2fs \
@@ -156,13 +154,10 @@ RRECOMMENDS_packagegroup-utils-tdx-cli = "\
     ${RANDOM_HELPER} \
     stress-ng \
     sqlite3 \
-    tdx-oak-sensors \
     ${USB_GADGET} \
     util-linux \
 "
-RRECOMMENDS_packagegroup-utils-tdx-cli_append_mx8 = " \
-    cpuburn-a53 \
-"
+
 RRECOMMENDS_packagegroup-utils-tdx-cli_append_tegra124 = " \
     tegrastats \
 "
@@ -172,7 +167,6 @@ RRECOMMENDS_packagegroup-utils-large-tdx-cli = "\
     aspell \
     file \
     joe \
-    packagegroup-dotnet-deps \
 "
 
 SUMMARY_packagegroup-wifi-tdx-cli = "Useful Wi-Fi utilities and firmware"
@@ -180,7 +174,6 @@ BACKPORTS = ""
 RRECOMMENDS_packagegroup-wifi-tdx-cli = "\
     ${BACKPORTS} \
     hostapd \
-    hostapd-example \
     wireless-regdb-static \
 "
 

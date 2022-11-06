@@ -63,7 +63,6 @@ RRECOMMENDS_packagegroup-gstreamer-tdx-graphical_append_mx8 = " \
 
 SUMMARY_packagegroup-gpu-utils-tdx-graphical = "Utilities for GPU (OpenGL...)"
 IMAGE_INSTALL_OPENCL_IMX = " \
-    clpeak \
     libopencl-imx \
 "
 RRECOMMENDS_packagegroup-gpu-tdx-graphical = " \
