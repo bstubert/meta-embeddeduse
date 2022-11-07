@@ -39,4 +39,6 @@ IMAGE_INSTALL += " \
     net-tools \
     util-linux \
     v4l-utils \
+    \
+    cuteradio \
 "
