@@ -11,12 +11,13 @@ export IMAGE_BASENAME = "Smart-HMI-Image"
 SYSTEMD_DEFAULT_TARGET = "graphical.target"
 
 IMAGE_FEATURES += " \
+    debug-tweaks \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', '', \
        bb.utils.contains('DISTRO_FEATURES',     'x11', 'x11', \
                                                        '', d), d)} \
 "
 
-APP_LAUNCH_WAYLAND ?= ""
+APP_LAUNCH_WAYLAND ?= "wayland-cuteradio"
 APP_LAUNCH_X11 ?= ""
 
 IMAGE_INSTALL += " \

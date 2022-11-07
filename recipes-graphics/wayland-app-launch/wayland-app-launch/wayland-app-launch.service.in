@@ -1,0 +1,14 @@
+[Unit]
+Description=Start a wayland application
+After=weston@root.service
+Requires=weston@root.service
+
+[Service]
+Restart=on-failure
+Type=forking
+Environment=@@application-environment@@
+ExecStart=/usr/bin/wayland-app-launch.sh
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
