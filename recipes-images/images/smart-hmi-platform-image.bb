@@ -8,22 +8,7 @@ inherit populate_sdk_qt5
 #Prefix to the resulting deployable tarball name
 export IMAGE_BASENAME = "Smart-HMI-Platform"
 
-IMAGE_FEATURES += " \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'weston', \
-       bb.utils.contains('DISTRO_FEATURES', 'x11', 'x11-base', '', d), d)} \
-"
-
-APP_LAUNCH_WAYLAND ?= ""
-
-APP_LAUNCH_X11 ?= ""
-
 IMAGE_INSTALL += " \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', \
-                         '${APP_LAUNCH_WAYLAND}', '', d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'x11 wayland', \
-                         'weston-xwayland xterm', \
-       bb.utils.contains('DISTRO_FEATURES', 'x11', '${APP_LAUNCH_X11}', '', d), d)} \
-    \
     packagegroup-tdx-cli \
     packagegroup-tdx-graphical \
     packagegroup-tdx-qt5 \
@@ -37,4 +22,10 @@ IMAGE_INSTALL += " \
     net-tools \
     util-linux \
     v4l-utils \
+    weston \
+    weston-xwayland \
+    xterm \
+    \
+    cuteradio \
+    wayland-cuteradio \
 "

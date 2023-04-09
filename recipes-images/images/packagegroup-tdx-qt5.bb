@@ -31,12 +31,6 @@ RRECOMMENDS:${PN}:colibri-imx7 = " \
     qtbase-examples \
 "
 
-SUMMARY:${PN}-demos = "QT5 Demos"
-RRECOMMENDS:${PN}-demos = " \
-    cinematicexperience \
-    qtsmarthome \
-"
-
 SUMMARY:${PN}-fonts = "Some fonts useful for QT5"
 RRECOMMENDS:${PN}-fonts = " \
     ttf-dejavu-common \
