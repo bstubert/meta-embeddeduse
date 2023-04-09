@@ -8,6 +8,10 @@ inherit populate_sdk_qt5
 #Prefix to the resulting deployable tarball name
 export IMAGE_BASENAME = "Smart-HMI-Platform"
 
+IMAGE_FEATURES += " \
+    weston \
+"
+
 IMAGE_INSTALL += " \
     packagegroup-tdx-cli \
     packagegroup-tdx-graphical \
@@ -22,7 +26,6 @@ IMAGE_INSTALL += " \
     net-tools \
     util-linux \
     v4l-utils \
-    weston \
     weston-xwayland \
     xterm \
     \
