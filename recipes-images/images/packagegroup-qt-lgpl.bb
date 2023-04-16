@@ -15,7 +15,7 @@ RRECOMMENDS:${PN} = " \
     ${PN}-libs \
 "
 
-SUMMARY:${PN}-fonts = "Some fonts useful for QT5"
+SUMMARY:${PN}-fonts = "Some fonts useful for Qt"
 RRECOMMENDS:${PN}-fonts = " \
     ttf-dejavu-common \
     ttf-dejavu-sans \
@@ -31,15 +31,12 @@ RRECOMMENDS:${PN}-libs = " \
     qtbase \
     qtconnectivity \
     qtdeclarative \
-    qtgraphicaleffects \
     qtimageformats \
     qtmultimedia \
-    qtquickcontrols2 \
     qtremoteobjects \
     qtsensors \
     qtserialbus \
     qtserialport \
-    qtsystems \
     qttools \
     qttranslations \
     qtwayland \

@@ -3,7 +3,7 @@ require tdx-reference-minimal-image.bb
 SUMMARY = "Smart HMI Platform"
 DESCRIPTION = "Embedded Linux image for smart HMI platform based on Qt 6"
 
-inherit populate_sdk_qt5
+inherit populate_sdk_qt6
 
 #Prefix to the resulting deployable tarball name
 export IMAGE_BASENAME = "Smart-HMI-Platform"
@@ -26,8 +26,6 @@ IMAGE_INSTALL += " \
     net-tools \
     util-linux \
     v4l-utils \
-    weston-xwayland \
-    xterm \
     \
     cuteradio \
     wayland-cuteradio \
