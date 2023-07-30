@@ -6,7 +6,8 @@ DESCRIPTION = "Embedded Linux image for smart HMI platform based on Qt 6"
 inherit populate_sdk_qt6
 
 #Prefix to the resulting deployable tarball name
-export IMAGE_BASENAME = "Smart-HMI-Platform"
+IMAGE_BASENAME = "Smart-HMI-Platform"
+SDK_NAME = "SDK-${MACHINE}-${IMAGE_BASENAME}"
 
 IMAGE_FEATURES += " \
     weston \

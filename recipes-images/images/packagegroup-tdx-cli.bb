@@ -105,7 +105,6 @@ RRECOMMENDS:packagegroup-machine-tdx-cli:colibri-imx7 = "\
     mtd-utils-ubifs \
 "
 RRECOMMENDS:packagegroup-machine-tdx-cli:verdin-imx8mp = "\
-    btuart \
     mwifiexap \
 "
 RRECOMMENDS:packagegroup-machine-tdx-cli:mx8-generic-bsp = "\
