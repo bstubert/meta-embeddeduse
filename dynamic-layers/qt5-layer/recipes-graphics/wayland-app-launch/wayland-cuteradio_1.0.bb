@@ -3,6 +3,6 @@
 
 INITIAL_APP_PKGS ?= "cuteradio qtwayland"
 APPLICATION_ENVIRONMENT ?= 'QT_QPA_PLATFORM=wayland-egl'
-WAYLAND_APPLICATION ?= "/usr/bin/cuteradio"
+WAYLAND_APPLICATION ?= "/opt/embeddeduse/bin/cuteradio"
 
 require wayland-app-launch.inc
