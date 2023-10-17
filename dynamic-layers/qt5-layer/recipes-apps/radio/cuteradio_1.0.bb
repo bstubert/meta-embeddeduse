@@ -15,4 +15,5 @@ SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
 S = "${WORKDIR}/git"
 
-DEPENDS += "qtbase qtdeclarative qtdeclarative-native qtmultimedia"
+DEPENDS += "qtbase qtdeclarative qtdeclarative-native qtquickcontrols2 qtmultimedia"
+RDEPENDS:${PN} = "qtdeclarative-qmlplugins qtquickcontrols2-qmlplugins qtmultimedia-qmlplugins"
