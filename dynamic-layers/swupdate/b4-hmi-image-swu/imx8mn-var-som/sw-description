@@ -1,13 +1,16 @@
 software =
 {
-	version = "0.1.0";
+    version = "0.1.0";
 
 	imx8mn-var-som = {
-		hardware-compatibility: [ "1.0" ];
+		hardware-compatibility = [ "1.0" ];
 
-		files: (
-			{
-				filename = "b4-hmi-image-imx8mn-var-som.tar.gz";
+        files: (
+            {
+                name = "rootfs";
+                version = "1.0.6";
+                install-if-higher = true;
+                filename = "b4-hmi-image-imx8mn-var-som.tar.gz";
 				type = "archive";
 				compressed = true;
 				device = "/dev/update";

@@ -35,6 +35,8 @@ function format_update_device
 }
 
 if [ $1 == "preinst" ]; then
+  echo "Running update.sh preinst"
+
 	# get the current root device
 	get_current_root_device
 
@@ -50,15 +52,19 @@ if [ $1 == "preinst" ]; then
 fi
 
 if [ $1 == "postinst" ]; then
+  echo "Running update.sh postinst"
 	get_current_root_device
 
 	# Adjust u-boot-fw-utils for eMMC on the installed rootfs
-	mount -t ext4 /dev/update /tmp/datadst
-	CURRENT_BLK_DEV=${CURRENT_ROOT%p?}
-	sed -i "s/\/dev\/mmcblk./${CURRENT_BLK_DEV//\//\\/}/" /tmp/datadst/etc/fw_env.config
-	umount /dev/update
+	mkdir /tmp/datadst || exit 1
+  mount -t ext4 /dev/update /tmp/datadst || exit 1
+  [[ -e /tmp/datadst/etc/fw_env.config ]] || exit 0
+
+  CURRENT_BLK_DEV=${CURRENT_ROOT%p?}
+  sed -i "s/\/dev\/mmcblk./${CURRENT_BLK_DEV//\//\\/}/" /tmp/datadst/etc/fw_env.config || exit 1
+  umount /dev/update || exit 1
 
 	get_update_part
 
-	fw_setenv mmcpart $UPDATE_PART
+	fw_setenv mmcpart $UPDATE_PART || exit 1
 fi
