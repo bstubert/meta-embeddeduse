@@ -4,7 +4,7 @@ SECTION = ""
 # Note: sw-description is mandatory
 SRC_URI = " \
 	file://sw-description \
-	file://update.sh \
+	file://preinstall.sh \
 "
 
 inherit swupdate

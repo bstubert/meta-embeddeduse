@@ -1,30 +1,62 @@
-software =
-{
+software = {
     version = "0.1.0";
 
-	imx8mn-var-som = {
-		hardware-compatibility = [ "1.0" ];
+    imx8mn-var-som = {
+        hardware-compatibility: [ "1.0" ];
+        stable: {
+            copy_a: {
+                scripts: (
+                    {
+                        filename = "preinstall.sh";
+                        type = "preinstall";
+                        data = "/dev/mmcblk2p1 rootfs1";
+                    }
+                );
+                files: (
+                    {
+                        filename = "b4-hmi-image-imx8mn-var-som.tar.gz";
+                        type = "archive";
+                        compressed = true;
+                        device = "/dev/mmcblk2p1";
+                        filesystem = "ext4";
+                        preserve-attributes = true;
+                        path = "/";
+                    }
+                );
+                uboot: (
+                    {
+                        name = "mmcpart";
+                        value = "1";
+                    }
+                );
+            }
 
-        files: (
-            {
-                name = "rootfs";
-                version = "1.0.6";
-                install-if-higher = true;
-                filename = "b4-hmi-image-imx8mn-var-som.tar.gz";
-				type = "archive";
-				compressed = true;
-				device = "/dev/update";
-				filesystem = "ext4";
-				preserve-attributes = true;
-				path = "/";
-			}
-		);
-
-		scripts: (
-			{
-				filename = "update.sh";
-				type = "shellscript";
-			}
-		);
-	};
+            copy_b: {
+                scripts: (
+                    {
+                        filename = "preinstall.sh";
+                        type = "preinstall";
+                        data = "/dev/mmcblk2p2 rootfs2";
+                    }
+                );
+                files: (
+                    {
+                        filename = "b4-hmi-image-imx8mn-var-som.tar.gz";
+                        type = "archive";
+                        compressed = true;
+                        device = "/dev/mmcblk2p2";
+                        filesystem = "ext4";
+                        preserve-attributes = true;
+                        path = "/";
+                    }
+                );
+                uboot: (
+                    {
+                        name = "mmcpart";
+                        value = "2";
+                    }
+                );
+            }
+        }
+    }
 }
