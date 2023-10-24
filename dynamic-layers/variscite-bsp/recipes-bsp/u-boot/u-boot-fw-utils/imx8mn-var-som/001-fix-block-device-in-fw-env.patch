@@ -1,0 +1,13 @@
+diff --git a/recipes-bsp/u-boot/u-boot-fw-utils/imx8mn-var-som/fw_env.config b/recipes-bsp/u-boot/u-boot-fw-utils/imx8mn-var-som/fw_env.config
+index 5b31c74..44e6233 100644
+--- a/recipes-bsp/u-boot/u-boot-fw-utils/imx8mn-var-som/fw_env.config
++++ b/recipes-bsp/u-boot/u-boot-fw-utils/imx8mn-var-som/fw_env.config
+@@ -9,7 +9,7 @@
+ #/dev/mtd2		0x00000		0x20000		0x20000			1
+ 
+ # Block device example
+-/dev/mmcblk1		0x400000	0x4000
++/dev/mmcblk2		0x400000	0x4000
+ 
+ # VFAT example
+ #/boot/uboot.env	0x00000		0x4000
