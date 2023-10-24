@@ -28,4 +28,4 @@ IMAGE_INSTALL += " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'qtwayland qtwayland-plugins', '', d)} \
 "
 
-IMAGE_FSTYPES = "tar.gz wic.gz"
+IMAGE_FSTYPES = "ext4.gz"

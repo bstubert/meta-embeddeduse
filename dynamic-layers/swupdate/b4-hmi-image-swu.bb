@@ -3,8 +3,7 @@ SECTION = ""
 
 # Note: sw-description is mandatory
 SRC_URI = " \
-	file://sw-description \
-	file://preinstall.sh \
+    file://sw-description \
 "
 
 inherit swupdate
@@ -24,4 +23,4 @@ SWUPDATE_IMAGES = " \
 
 # Images can have multiple formats - define which image must be
 # taken to be put in the compound image
-SWUPDATE_IMAGES_FSTYPES[b4-hmi-image] = ".tar.gz"
+SWUPDATE_IMAGES_FSTYPES[b4-hmi-image] = ".ext4.gz"

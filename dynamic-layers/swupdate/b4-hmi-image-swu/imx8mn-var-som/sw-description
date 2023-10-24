@@ -5,22 +5,13 @@ software = {
         hardware-compatibility: [ "1.0" ];
         stable: {
             copy_a: {
-                scripts: (
+                images: (
                     {
-                        filename = "preinstall.sh";
-                        type = "preinstall";
-                        data = "/dev/mmcblk2p1 rootfs1";
-                    }
-                );
-                files: (
-                    {
-                        filename = "b4-hmi-image-imx8mn-var-som.tar.gz";
-                        type = "archive";
-                        compressed = true;
+                        filename = "b4-hmi-image-imx8mn-var-som.ext4.gz";
+                        type = "raw";
+                        compressed = "zlib";
                         device = "/dev/mmcblk2p1";
-                        filesystem = "ext4";
-                        preserve-attributes = true;
-                        path = "/";
+                        installed-directly = true;
                     }
                 );
                 uboot: (
@@ -32,22 +23,13 @@ software = {
             }
 
             copy_b: {
-                scripts: (
+                images: (
                     {
-                        filename = "preinstall.sh";
-                        type = "preinstall";
-                        data = "/dev/mmcblk2p2 rootfs2";
-                    }
-                );
-                files: (
-                    {
-                        filename = "b4-hmi-image-imx8mn-var-som.tar.gz";
-                        type = "archive";
-                        compressed = true;
+                        filename = "b4-hmi-image-imx8mn-var-som.ext4.gz";
+                        type = "raw";
+                        compressed = "zlib";
                         device = "/dev/mmcblk2p2";
-                        filesystem = "ext4";
-                        preserve-attributes = true;
-                        path = "/";
+                        installed-directly = true;
                     }
                 );
                 uboot: (
