@@ -28,4 +28,8 @@ IMAGE_INSTALL += " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'qtwayland qtwayland-plugins', '', d)} \
 "
 
+IMAGE_ROOTFS_SIZE = "4091904"
+IMAGE_ROOTFS_MAXSIZE = "4194304"
+IMAGE_OVERHEAD_FACTOR = "1"
+IMAGE_ROOTFS_EXTRA_SPACE = "0"
 IMAGE_FSTYPES = "ext4.gz"
