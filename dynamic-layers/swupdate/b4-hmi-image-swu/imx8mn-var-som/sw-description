@@ -14,7 +14,7 @@ software = {
                         installed-directly = true;
                     }
                 );
-                uboot: (
+                bootenv: (
                     {
                         name = "mmcpart";
                         value = "1";
@@ -32,7 +32,7 @@ software = {
                         installed-directly = true;
                     }
                 );
-                uboot: (
+                bootenv: (
                     {
                         name = "mmcpart";
                         value = "2";
