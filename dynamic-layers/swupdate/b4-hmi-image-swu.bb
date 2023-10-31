@@ -4,6 +4,8 @@ SECTION = ""
 # Note: sw-description is mandatory
 SRC_URI = " \
     file://sw-description \
+    file://bootloader-env-1 \
+    file://bootloader-env-2 \
 "
 
 inherit swupdate
