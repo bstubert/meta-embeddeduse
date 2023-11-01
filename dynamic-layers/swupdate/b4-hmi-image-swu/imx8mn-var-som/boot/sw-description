@@ -4,11 +4,11 @@ software = {
     imx8mn-var-som = {
         hardware-compatibility: [ "1.0" ];
         stable: {
-            rootfs1_boot1: {
+            rootfs1: {
                 images: (
                     {
                         name = "rootfs";
-                        version = "1.1.0";
+                        version = "1.1.1";
                         install-if-higher = true;
                         filename = "b4-hmi-image-imx8mn-var-som.ext4.gz";
                         type = "raw";
@@ -18,7 +18,7 @@ software = {
                     },
                     {
                         name = "bootenv";
-                        version = "1.1.0";
+                        version = "1.1.1";
                         install-if-higher = true;
                         filename = "bootloader-env-1";
                         type = "bootloader";
@@ -27,7 +27,7 @@ software = {
                 files: (
                     {
                         name = "uboot";
-                        version = "0.1.0";
+                        version = "0.1.1";
                         install-if-higher = true;
                         filename = "imx-boot-sd.bin";
                         type = "rawfile";
@@ -37,44 +37,11 @@ software = {
                 );
             }
 
-            rootfs1_boot2: {
+            rootfs2: {
                 images: (
                     {
                         name = "rootfs";
-                        version = "1.1.0";
-                        install-if-higher = true;
-                        filename = "b4-hmi-image-imx8mn-var-som.ext4.gz";
-                        type = "raw";
-                        compressed = "zlib";
-                        device = "/dev/mmcblk2p1";
-                        installed-directly = true;
-                    },
-                    {
-                        name = "bootenv";
-                        version = "1.1.0";
-                        install-if-higher = true;
-                        filename = "bootloader-env-1";
-                        type = "bootloader";
-                    }
-                );
-                files: (
-                    {
-                        name = "uboot";
-                        version = "0.1.0";
-                        install-if-higher = true;
-                        filename = "imx-boot-sd.bin";
-                        type = "rawfile";
-                        path = "uboot.bin";
-                        atomic-install = true;
-                    }
-                );
-            }
-
-            rootfs2_boot1: {
-                images: (
-                    {
-                        name = "rootfs";
-                        version = "1.1.0";
+                        version = "1.1.1";
                         install-if-higher = true;
                         filename = "b4-hmi-image-imx8mn-var-som.ext4.gz";
                         type = "raw";
@@ -84,7 +51,7 @@ software = {
                     },
                     {
                         name = "bootenv";
-                        version = "1.1.0";
+                        version = "1.1.1";
                         install-if-higher = true;
                         filename = "bootloader-env-2";
                         type = "bootloader";
@@ -93,40 +60,7 @@ software = {
                 files: (
                     {
                         name = "uboot";
-                        version = "0.1.0";
-                        install-if-higher = true;
-                        filename = "imx-boot-sd.bin";
-                        type = "rawfile";
-                        path = "uboot.bin";
-                        atomic-install = true;
-                    }
-                );
-            }
-
-            rootfs2_boot2: {
-                images: (
-                    {
-                        name = "rootfs";
-                        version = "1.1.0";
-                        install-if-higher = true;
-                        filename = "b4-hmi-image-imx8mn-var-som.ext4.gz";
-                        type = "raw";
-                        compressed = "zlib";
-                        device = "/dev/mmcblk2p2";
-                        installed-directly = true;
-                    },
-                    {
-                        name = "bootenv";
-                        version = "1.1.0";
-                        install-if-higher = true;
-                        filename = "bootloader-env-2";
-                        type = "bootloader";
-                    }
-                );
-                files: (
-                    {
-                        name = "uboot";
-                        version = "0.1.0";
+                        version = "0.1.1";
                         install-if-higher = true;
                         filename = "imx-boot-sd.bin";
                         type = "rawfile";
